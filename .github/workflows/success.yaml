@@ -10,7 +10,7 @@ jobs:
     - id: setenv
       run: echo "::set-output name=my_env::production"
 
-  use_outputs_environemnt_directly:    
+  use_outputs_environemnt:    
     needs: set_environment
     environment: 
       name: ${{ needs.set_environment.outputs.my_env }}
