@@ -1,0 +1,19 @@
+name: Set Job Enviroment Dynamically 
+on:
+  workflow_dispatch:
+jobs:
+  set_environment:
+    outputs:
+      my_env: ${{ steps.setenv.outputs.my_env }}
+    runs-on: ubuntu-latest
+    steps:
+    - id: setenv
+      run: echo "::set-output name=my_env::production"
+
+  use_outputs_environemnt_directly:    
+    needs: set_environment
+    environment: ${{ needs.set_environment.outputs.my_env }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Testing job environment
+      run: echo "Hello From Production Envrionment." 
