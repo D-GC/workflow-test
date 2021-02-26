@@ -1,4 +1,4 @@
-name: Fails - Set Job Enviroment Dynamically 
+name: Fails - Set job enviroment dynamically using key-value format
 on:
   workflow_dispatch:
 jobs:
