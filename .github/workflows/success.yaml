@@ -1,4 +1,4 @@
-name: Set Job Enviroment Dynamically 
+name: Success - Set Job Enviroment Dynamically 
 on:
   workflow_dispatch:
 jobs:
