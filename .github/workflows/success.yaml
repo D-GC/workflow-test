@@ -1,4 +1,4 @@
-name: Success - Set Job Enviroment Dynamically using object format
+name: Success - Set job enviroment dynamically using object format
 on:
   workflow_dispatch:
 jobs:
